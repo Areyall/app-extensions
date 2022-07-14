@@ -26,11 +26,12 @@ body {
 
 .avarage-rating {
     font-size: 26px;
+    gap: 8px;
+    margin-bottom: 8px;
     /* flex props */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 9px;
 
 }
 
@@ -43,6 +44,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 7px 20px 0 grey;
     text-align: center;
+    min-width: 150px;
 }
 
 .star-icon {
@@ -58,10 +60,12 @@ body {
 
 .star-icon .icon-path {
     fill: #ed8a19;
-    stroke: orange !important;
+    stroke: yellow;
 }
 
 .header {
+    gap: 80px;
     /* line side by side */
     display: flex;
+    gap: 80px;
 }
