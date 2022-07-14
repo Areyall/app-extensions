@@ -1,0 +1,67 @@
+/* select all elements and change the box sizing to border box */
+
+*,
+**::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    background-color: rgb(143, 140, 140);
+    font-size: 16px;
+}
+
+.card {
+    background-color: #dddddd;
+    padding: 84px;
+    border-radius: 23px;
+}
+
+.title {
+    font-size: 34px;
+    font-family: Merriweather;
+    flex-grow: 1;
+}
+
+.avarage-rating {
+    font-size: 26px;
+    /* flex props */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+}
+
+.avagage-rating-section {
+
+    font-weight: 500;
+    font-size: 14px;
+    padding: 17px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 7px 20px 0 grey;
+    text-align: center;
+}
+
+.star-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.avagage-rating-section .star-icon {
+    width: 46px;
+    height: 46px;
+
+}
+
+.star-icon .icon-path {
+    fill: #ed8a19;
+    stroke: orange !important;
+}
+
+.header {
+    /* line side by side */
+    display: flex;
+}
