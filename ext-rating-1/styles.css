@@ -68,4 +68,29 @@ body {
     /* line side by side */
     display: flex;
     gap: 80px;
+    margin-bottom: 56px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+}
+
+.search-icon{
+    position: absolute;
+    height: 24px;
+    padding: 16px;
+    pointer-events: none;
+    
+}
+
+.search-input{
+    padding: 16px;
+    border-radius: 26px;
+    background-color: white;
+    font-weight: 500;
+    font-size: inherit;
+    padding-left: calc(10px + 16px + 24px);
+    border: none;
+    width: 100%;
 }
