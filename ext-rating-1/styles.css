@@ -71,20 +71,21 @@ body {
     margin-bottom: 56px;
 }
 
-.search-bar{
+.search-bar {
     display: flex;
     align-items: center;
+    margin-bottom: 32px;
 }
 
-.search-icon{
+.search-icon {
     position: absolute;
     height: 24px;
     padding: 16px;
     pointer-events: none;
-    
+
 }
 
-.search-input{
+.search-input {
     padding: 16px;
     border-radius: 26px;
     background-color: white;
@@ -94,3 +95,40 @@ body {
     border: none;
     width: 100%;
 }
+
+.reviev-section {}
+
+
+.reviev-title{
+    margin-bottom: 16px;
+}
+
+.reviev-row {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reviev-number{
+    font-weight: bold;
+}
+
+.reviev-bar{
+    flex-grow: 1;
+    border: 1px solid rgb(214, 141, 46);
+    background-color: #ed8a19;
+    height: 10px;
+    border-radius: 100px;
+}
+
+.reviev-row:last-child {
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
