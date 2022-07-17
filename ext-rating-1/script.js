@@ -1,0 +1,1 @@
+const reviewBarContainer = document.querySelector('.review-bar');

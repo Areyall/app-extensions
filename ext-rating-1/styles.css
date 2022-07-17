@@ -96,22 +96,32 @@ body {
     width: 100%;
 }
 
-.review-section {}
+.review-rows {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    column-gap: 8px;
+    row-gap: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 16px;
+    align-items: center;
 
+}
+
+.review-section{
+    margin-bottom: 32px;
+}
 
 .review-title {
     margin-bottom: 16px;
 }
 
-.review-row {
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .review-number {
     font-weight: bold;
+    /* font-variant-numeric: tabular-nums;
+    font-family: sans-serif; font doesnt support it*/
+    text-align: end;
+    justify-self: flex-end;
 }
 
 .review-bar {
