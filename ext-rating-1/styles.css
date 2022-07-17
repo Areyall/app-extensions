@@ -144,3 +144,20 @@ body {
 .review-row:last-child {
     margin-top: 0px;
 }
+
+.review-btn{
+    background-color: rgb(1, 0, 49);
+    color: white;
+    border-radius: 100px;
+    padding: 16px 24px;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline-color: hsl(240, 50%, 80%);
+
+}
+
+.review-btn:hover{
+    background-color: rgb(0, 0, 109);
+}
