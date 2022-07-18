@@ -17,5 +17,3 @@ const averageReview =
   }, 0) / totalReviews;
 
 averageReviewElem.textContent = Math.round(averageReview * 10) / 10;
-
-console.log('hello')
