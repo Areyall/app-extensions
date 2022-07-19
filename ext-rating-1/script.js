@@ -56,7 +56,7 @@ Object.entries(REVIEWS)
 
     const reviewBar = document.createElement('div');
     reviewBar.classList.add('review-bar');
-    reviewBar.style.setProperty('width', `${(quant / totalReviews) * 100}%`);
+    reviewBar.style.setProperty('--width', `${(quant / totalReviews) * 100}%`);
     reviewBar.classList.toggle('empty', quant === 0);
     reviewRowsContainer.append(reviewBar);
 
