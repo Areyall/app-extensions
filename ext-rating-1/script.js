@@ -44,7 +44,6 @@ averageReviewElem.textContent = Math.round(averageReview * 10) / 10;
 Object.entries(REVIEWS)
   .sort(([a], [b]) => b - a)
   .forEach(([val, quant]) => {
-
     const reviewNum = document.createElement('div');
     reviewNum.textContent = val;
     reviewNum.classList.add('review-number');
@@ -61,10 +60,37 @@ Object.entries(REVIEWS)
     reviewRowsContainer.append(reviewBar);
 
     const reviewCount = document.createElement('div');
-    reviewCount.textContent = quant;
+    reviewCount.dataset.endValue = quant;
+    reviewCount.dataset.currentValue = 0;
+    reviewCount.textContent = 0;
+    // reviewCount.textContent = quant;
     reviewCount.classList.add('review-count');
     reviewRowsContainer.append(reviewCount);
   });
+
+let timeOffSet;
+const DURATION = 5000;
+function update(time) {
+  if (timeOffSet != null) {
+    const timeElapsed = time - timeOffSet;
+    const updateElems = document.querySelectorAll('[data-end-value]');
+    updateElems.forEach((elem) => {
+      const endValue = elem.dataset.endValue;
+      const newCurrentValue = Math.min(
+       Math.round((endValue * timeElapsed) / DURATION),
+        endValue
+      );
+      elem.textContent = newCurrentValue;
+    });
+    if (timeElapsed >= DURATION) return;
+    requestAnimationFrame(update);
+  } else {
+    timeOffSet = time;
+    requestAnimationFrame(update);
+  }
+}
+
+requestAnimationFrame(update);
 
 // {<div class="review-number">5</div>
 // <div class="review-bar"></div>
