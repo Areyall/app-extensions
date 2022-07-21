@@ -92,6 +92,3 @@ function update(time) {
 
 requestAnimationFrame(update);
 
-// {<div class="review-number">5</div>
-// <div class="review-bar"></div>
-// <div class="review-count">10600</div>}

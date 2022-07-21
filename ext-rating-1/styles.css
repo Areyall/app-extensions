@@ -142,6 +142,7 @@ body {
     left: calc(-1 * var(--border-width));
     right: calc(-1 * var(--border-width));
     width: calc(2 * var(--border-width) + var(--width));
+    transition: : width 500ms ease-out;
     border: 1px solid rgb(214, 141, 46);
     background-color: #ed8a19;
     border-radius: 100px;
