@@ -35,15 +35,17 @@ const totalReviews = Object.values(REVIEWS).reduce((sum, value) => {
   return sum + value;
 }, 0);
 const averageReview =
-  Object.entries(REVIEWS).reduce((sum, [value, quantity]) => {
-    return sum + value * quantity;
+  Object.entries(REVIEWS).reduce((sum, [value, quantityity]) => {
+    return sum + value * quantityity;
   }, 0) / totalReviews;
 
-averageReviewElem.textContent = Math.round(averageReview * 10) / 10;
+averageReviewElem.dataset.endValue = Math.round(averageReview * 10) / 10;
+
+averageReviewElem.textContent = 0;
 
 Object.entries(REVIEWS)
   .sort(([a], [b]) => b - a)
-  .forEach(([val, quant]) => {
+  .forEach(([val, quantity]) => {
     const reviewNum = document.createElement('div');
     reviewNum.textContent = val;
     reviewNum.classList.add('review-number');
@@ -54,34 +56,54 @@ Object.entries(REVIEWS)
     reviewRowsContainer.append(starIconWraper);
 
     const reviewBar = document.createElement('div');
+    reviewBar.dataset.endValue = (quantity / totalReviews) * 100;
     reviewBar.classList.add('review-bar');
-    reviewBar.style.setProperty('--width', `${(quant / totalReviews) * 100}%`);
-    reviewBar.classList.toggle('empty', quant === 0);
+
+    reviewBar.classList.toggle('empty', quantity === 0);
     reviewRowsContainer.append(reviewBar);
 
     const reviewCount = document.createElement('div');
-    reviewCount.dataset.endValue = quant;
-    reviewCount.dataset.currentValue = 0;
+    reviewCount.dataset.endValue = quantity;
     reviewCount.textContent = 0;
-    // reviewCount.textContent = quant;
     reviewCount.classList.add('review-count');
     reviewRowsContainer.append(reviewCount);
   });
 
 let timeOffSet;
-const DURATION = 5000;
+const DURATION = 1000;
 function update(time) {
   if (timeOffSet != null) {
     const timeElapsed = time - timeOffSet;
-    const updateElems = document.querySelectorAll('[data-end-value]');
-    updateElems.forEach((elem) => {
+    const newAverage = getNewValue(
+      averageReviewElem.dataset.endValue,
+      timeElapsed
+    );
+    averageReviewElem.textContent = Math.round(newAverage * 10) / 10;
+    const countElems = document.querySelectorAll(
+      '.review-count[data-end-value]'
+    );
+
+    countElems.forEach((elem) => {
       const endValue = elem.dataset.endValue;
       const newCurrentValue = Math.min(
-       Math.round((endValue * timeElapsed) / DURATION),
+        Math.round((endValue * timeElapsed) / DURATION),
         endValue
       );
-      elem.textContent = newCurrentValue;
+      elem.textContent = Math.round(
+        getNewValue(elem.dataset.endValue, timeElapsed)
+      );
     });
+
+    const reviewBars = document.querySelectorAll(
+      '.review-bar[data-end-value]'
+    );
+    reviewBars.forEach((elem) => {
+      elem.style.setProperty(
+        '--width',
+        `${getNewValue(elem.dataset.endValue, timeElapsed)}%`
+      );
+    });
+
     if (timeElapsed >= DURATION) return;
     requestAnimationFrame(update);
   } else {
@@ -89,6 +111,11 @@ function update(time) {
     requestAnimationFrame(update);
   }
 }
+function getNewValue(endValue, timeElapsed) {
+  return Math.min((endValue * timeElapsed) / DURATION, endValue);
+}
 
 requestAnimationFrame(update);
 
+//   `${}%`
+// );
