@@ -9,8 +9,8 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <form action="">
-      <div class="card" data-step="1">
+    <form data-multi-step>
+      <div class="card" data-step>
         <h3 class="step-title">This is step 1</h3>
         <div class="form-group">
           <label for="email">Email</label>
@@ -24,7 +24,7 @@
         </div>
         <button type="button">Next</button>
       </div>
-      <div class="card" data-step="2">
+      <div class="card" data-step>
         <h3 class="step-title">This is step 2</h3>
         <div class="form-group">
           <label for="name">Name</label>
@@ -37,15 +37,15 @@
           <input type="city" name="city" id="city" />
         </div>
         <div class="form-group">
-            <label for="facebook">Facebook</label>
-  
-            <input type="facebook" name="facebook" id="facebook" />
-          </div>
+          <label for="facebook">Facebook</label>
+
+          <input type="facebook" name="facebook" id="facebook" />
+        </div>
 
         <button type="button">Previous</button>
         <button type="button">Next</button>
       </div>
-      <div class="card" data-step="3">
+      <div class="card" data-step>
         <h3 class="step-title">This is step 3</h3>
         <div class="form-group">
           <label for="phone">Phone</label>
