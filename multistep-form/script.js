@@ -7,17 +7,30 @@ let currentStep = formSteps.findIndex((step) => {
 
 if (currentStep < 0) {
   currentStep = 0;
-  formSteps[currentStep].classList.add('active');
   showCurrentStep();
 }
 
 multiStepForm.addEventListener('click', (e) => {
+  let incrementor;
   if (e.target.matches('[data-next]')) {
-    currentStep += 1;
+    incrementor = 1;
   } else if (e.target.matches('[data-previous]')) {
-    currentStep -= 1;
+    incrementor = -1;
   }
-  showCurrentStep();
+
+  if (incrementor == null) {
+    return;
+  }
+
+  const inputs = [...formSteps[currentStep].querySelectorAll('input')];
+
+  const allValid = inputs.every((input) => input.reportValidity());
+
+  if (allValid) {
+    currentStep += incrementor;
+    showCurrentStep();
+  }
+
 });
 
 function showCurrentStep() {
