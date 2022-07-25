@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: grey;
+}
+
+.navigation {
+    position: fixed;
+    display: flex;
+    min-height: 40rem;
+    background-color: whitesmoke;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
