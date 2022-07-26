@@ -16,7 +16,7 @@
     display: flex;
     height: 100%;
     background-color: whitesmoke;
-    width: 5rem;
+    width: 4rem;
     justify-content: center;
     align-items: center;
 
@@ -32,11 +32,12 @@
     left: 0;
     width: 100%;
     height: 60px;
-    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid rgb(111, 111, 111);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+    cursor: pointer;
 }
 
 .navigation .menu-toggle::before {
@@ -45,20 +46,27 @@
     width: 30px;
     height: 2px;
     background-color: grey;
+    transform: translateY(-8px);
+    transition: 0.5s;
 }
-
+.navigation.open .menu-toggle::before {
+    transform: translateY(0) rotate(45deg);
+}
 .navigation .menu-toggle::after {
     content: '';
     position: absolute;
     width: 30px;
     height: 2px;
     background-color: grey;
-    box-shadow: 1 -8px grey;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px gray;
 }
-
 .navigation.open .menu-toggle::after {
     transform: translateY(0) rotate(-45deg);
+    box-shadow: none;
 }
+
 
 .navigation ul {
     display: flex;
@@ -75,7 +83,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 6px;
     cursor: pointer;
     transition: 0.5s;
 }
