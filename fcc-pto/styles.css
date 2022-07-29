@@ -53,6 +53,16 @@ h1 {
     font-size: 2.8em;
     margin: 0.2em;
     text-align: center;
+    text-shadow: 2px 2px 8px rgb(249, 170, 143);
+}
+h2{
+    margin: 0.3em;
+}
+
+h4{
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(142, 216, 248);;
 }
 p{
     padding: 0 0.7em;
@@ -87,6 +97,12 @@ p{
     margin: 0;
     padding: 0;
 }
+
+.avatar-photo{
+    padding-top: 1.5em;
+}
+
+
 
 .nav-block {
     display: flex;
@@ -400,5 +416,7 @@ img {
         top: 0;
         transform: rotate(135deg);
         background: white;
+    }.nav-social {
+        gap: 0.1em;
     }
 }
