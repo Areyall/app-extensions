@@ -60,14 +60,19 @@ h1 {
 h2 {
     margin: 0.3em;
 }
-
+h2 a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
 h4 {
     font-size: 1.3em;
     text-align: center;
     color: var(--secondary-color);
+    margin: 0.7em 0;
 }
 
 p {
+    font-size: 1.1em;
     padding: 0 0.7em;
 }
 
@@ -115,14 +120,15 @@ p {
     flex-grow: 4;
 }
 
-#navbar li {
+.navbar-fixed li {
     width: 100%;
     padding-bottom: 0.4em;
     border-bottom: 2px solid var(--main-color);
+    text-align: center;
 }
 
-#navbar li:hover,
-#navbar li:active {
+.navbar-fixed li:hover,
+.navbar-fixed li:active {
 
     border-bottom: 2px solid var(--secondary-color);
 }
@@ -245,6 +251,7 @@ img {
     padding: 1px;
     border: 2px solid var(--secondary-color);
     border-radius: 10px;
+    text-shadow: 2px 2px 8px var(--secondary-color);
 }
 
 .project-image {
@@ -283,6 +290,35 @@ img {
     display: none;
 }
 
+.back-on-top{
+    position: fixed;
+    bottom: 1.2em;
+    right: 1.5em;
+    background: var(--main-font-color);
+    width: 50px;
+height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--main-color-nav);
+}
+
+.to-top a{
+    color: var(--secondary-color);
+    font-size: 1.8em;
+}
+
 @media screen and (max-width: 720px) {
     .project-grid {
         display: grid;
@@ -295,11 +331,14 @@ img {
 
     .toggler {
         display: block;
+        position: fixed;
         width: 40px;
         height: 40px;
         opacity: 0;
-        position: absolute;
         z-index: 50;
+
+        right: 6.5em;
+        top: 7px;
     }
 
     .container-content,
@@ -345,7 +384,7 @@ img {
 
 
     .hamburger {
-        position: relative;
+        position: fixed;
         width: 40px;
         height: 40px;
         padding: 0.6rem;
@@ -353,6 +392,7 @@ img {
         align-items: center;
         justify-content: center;
         z-index: 10;
+        right: 5em;
     }
 
     .hamburger div {
@@ -409,12 +449,14 @@ img {
         transition: all 0.4s ease;
     }
 
-    .toggler:checked~.footer-nav-block {
+    .toggler:checked~ #navbar .footer-nav-block {
         width: 30%;
     }
 
-    .toggler:checked~.footer-nav-block {
+    .toggler:checked~ #navbar .footer-nav-block {
         visibility: visible;
+        display: flex;
+        align-items: center;
     }
 
 
