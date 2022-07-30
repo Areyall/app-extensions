@@ -11,13 +11,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(66, 139, 202);
+    background: var(--secondary-color);
 }
 
 :root {
     --main-color: rgb(23, 33, 43);
     --main-color-nav: rgb(33, 33, 43);
     --main-font-color: rgb(222, 222, 222);
+    --secondary-color: rgb(142, 216, 248);
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -55,16 +56,18 @@ h1 {
     text-align: center;
     text-shadow: 2px 2px 8px rgb(249, 170, 143);
 }
-h2{
+
+h2 {
     margin: 0.3em;
 }
 
-h4{
-    font-size: 1.2em;
+h4 {
+    font-size: 1.3em;
     text-align: center;
-    color: rgb(142, 216, 248);;
+    color: var(--secondary-color);
 }
-p{
+
+p {
     padding: 0 0.7em;
 }
 
@@ -98,7 +101,7 @@ p{
     padding: 0;
 }
 
-.avatar-photo{
+.avatar-photo {
     padding-top: 1.5em;
 }
 
@@ -118,6 +121,12 @@ p{
     border-bottom: 2px solid var(--main-color);
 }
 
+#navbar li:hover,
+#navbar li:active {
+
+    border-bottom: 2px solid var(--secondary-color);
+}
+
 .nav-footer {
     flex-grow: 0.5;
 }
@@ -135,7 +144,12 @@ p{
     flex-wrap: wrap;
 }
 
+.nav-social-list svg:hover {
+    fill: var(--secondary-color);
+}
+
 .nav-social-list:hover {
+    color: var(--secondary-color);
     transform: translateY(0.3rem);
 }
 
@@ -173,7 +187,7 @@ ul li a {
     margin-left: 41%;
     flex-direction: column;
     align-content: center;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     padding-left: 0.7em;
     padding-right: 0.7em;
@@ -193,7 +207,6 @@ ul li a {
 #projects {
     flex-direction: column;
     height: 100%;
-    overflow: hidden;
 }
 
 .wellcome-header {
@@ -220,15 +233,18 @@ ul li a {
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    align-items: center;
+    align-items: start;
     justify-items: center;
-    align-content: center;
+    align-content: space-evenly;
     justify-content: center;
 }
 
 img {
     width: 100%;
     height: 100%;
+    padding: 1px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
 }
 
 .project-image {
@@ -416,7 +432,9 @@ img {
         top: 0;
         transform: rotate(135deg);
         background: white;
-    }.nav-social {
+    }
+
+    .nav-social {
         gap: 0.1em;
     }
 }
