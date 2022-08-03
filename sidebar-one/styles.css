@@ -19,8 +19,11 @@
     width: 4rem;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 
 }
+
+
 
 .navigation.open {
     width: 250px;
@@ -153,4 +156,13 @@ opacity: 0.5;
     visibility: hidden;
     transform: 0.5s;
     
+}
+
+.navigation.open ul li a .text{
+opacity: 1;
+visibility: visible;
+}
+
+.navigation ul li.active a .text{
+    color: var(--color);
 }
