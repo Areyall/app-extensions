@@ -7,10 +7,5 @@ menuToggle.addEventListener('click', () => {
 });
 
 listItems.forEach((item) => {
-  item.addEventListener('click', () => {
-    listItems.forEach((item) => {
-      item.classList.remove('active');
-    });
-    item.classList.add('active');
-  });
+  item.addEventListener('click', () => { listItems.forEach((item) => { item.classList.remove('active');}); item.classList.add('active');});
 });
