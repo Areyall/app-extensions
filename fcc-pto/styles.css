@@ -242,26 +242,27 @@ ul li a {
     width: 100%;
     height: 100%;
     align-items: start;
-    justify-items: center;
-    align-content: space-evenly;
-    justify-content: center;
 }
 
 img {
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
     padding: 1px;
     border: 2px solid var(--secondary-color);
     border-radius: 10px;
     text-shadow: 2px 2px 8px var(--secondary-color);
+    aspect-ratio: 4/3;
+    object-fit: cover;
 }
 
 .project-image {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-items: center;
+    padding: 0.6rem;
 }
 
-
+.project-image p {
+    margin: 0.5rem;
+}
 
 
 /* container footer */
