@@ -106,6 +106,13 @@ p {
 
 }
 
+.logo a {
+
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .logo p {
     margin: 0;
     padding: 0;
@@ -247,7 +254,7 @@ ul li a {
     align-items: start;
 }
 
-.led-img{
+.led-img {
     box-shadow: 2px -5px 20px var(--secondary-color);
     padding: 1px;
     border: 2px solid var(--secondary-color);
@@ -269,6 +276,7 @@ img {
 
 .project-image p {
     margin: 0.5rem;
+    text-align: center;
 }
 
 
