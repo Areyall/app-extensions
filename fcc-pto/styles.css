@@ -50,6 +50,8 @@ footer {
     height: 100%;
 }
 
+/* fonts */
+
 h1 {
     font-size: 2.8em;
     margin: 0.2em;
@@ -80,6 +82,8 @@ p {
 }
 
 
+/* container fixed */
+
 
 .container-fixed {
     display: flex;
@@ -95,7 +99,7 @@ p {
 
 }
 
-
+ /* logo */
 
 .logo {
     display: flex;
@@ -118,11 +122,7 @@ p {
     padding: 0;
 }
 
-.avatar-photo {
-    padding-top: 1.5em;
-}
-
-
+/* navbar cfixed */
 
 .nav-block {
     display: flex;
@@ -154,6 +154,8 @@ p {
     font-size: 1.5em;
     gap: 1.5rem;
 }
+
+/* cfixed bottom */
 
 .nav-social {
     display: flex;
@@ -233,6 +235,10 @@ ul li a {
     justify-content: center;
     align-content: space-between;
     align-items: center;
+}
+
+.avatar-photo {
+    padding-top: 1.5em;
 }
 
 .portfolio-title {
