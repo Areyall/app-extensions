@@ -6,10 +6,13 @@
     font-size: 3rem;
 
 }
+html{
+    --mail-color: rgb(75, 0, 175);
+}
 
 body {
     background-color: #f2f1ed;
-    color: rgb(73, 0, 175);
+    color: var(--mail-color);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
     border-radius: .1em;
     display: inline-block;
