@@ -1,6 +1,6 @@
 
 
-flip(flipCard, newNumber);
+// flip(flipCard, newNumber);
 
 const countToDate = new Date().setHours(new Date().getHours() + 24);
 let prewiousTimeBetweenDates;
@@ -51,7 +51,6 @@ function flip(flipCard, newNumber) {
   bottomFlip.addEventListener('animationend', (e) => {
     bottomHalf.textContent = newNumber;
     bottomFlip.remove();
-    flip(flipCard);
   });
   flipCard.append(topFlip, bottomFlip);
 }
