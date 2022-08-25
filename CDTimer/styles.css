@@ -13,7 +13,6 @@ html{
 body {
     background-color: #f2f1ed;
     color: var(--mail-color);
-    display: inline-block;
 
 }
 

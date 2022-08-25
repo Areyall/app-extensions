@@ -1,8 +1,25 @@
 const startNumber = 9;
 
-const flipCard = document.querySelector('.flip-card');
+flip(flipCard);
 
-flip(flipCard)
+const countToDate = new Date().setHours(new Date().getHours() + 24);
+let prewiousTimeBetweenDates;
+setInterval(() => {
+  const currentDate = new Date();
+  const timeBetweenDates = Math.ceil(currentDate - countToDate / 1000);
+
+  if (prewiousTimeBetweenDates !== timeBetweenDates) {
+    flipAllCards();
+  }
+
+  prewiousTimeBetweenDates = timeBetweenDates;
+}, 250);
+
+function flipAllCards(time) {
+  const seconds = time % 60;
+  const minutes = Math.fround(time / 60) % 60;
+  const hours = Math.floor(time / 3600);
+}
 
 function flip(flipCard) {
   const topHalf = flipCard.querySelector('.top');
@@ -27,7 +44,7 @@ function flip(flipCard) {
   bottomFlip.addEventListener('animationend', (e) => {
     bottomHalf.textContent = startNumber - 1;
     bottomFlip.remove();
-flip(flipCard)
+    flip(flipCard);
   });
   flipCard.append(topFlip, bottomFlip);
 }
