@@ -18,12 +18,12 @@ function flipAllCards(time) {
   const minutes = Math.floor(time / 60) % 60;
   const hours = Math.floor(time / 3600);
 
-  flip(document.querySelector('[data-hours-tens]'), Math.floor(hours / 10));
-  flip(document.querySelector('[data-hours-ones]'), hours % 10);
-  flip(document.querySelector('[data-minutes-tens]'), Math.floor(minutes / 10));
-  flip(document.querySelector('[data-minutes-ones]'), minutes % 10);
-  flip(document.querySelector('[data-seconds-tens]'), Math.floor(seconds / 10));
-  flip(document.querySelector('[data-seconds-ones]'), seconds % 10);
+  flip(document.querySelector('[data-hour-tens]'), Math.floor(hours / 10));
+  flip(document.querySelector('[data-hour-ones]'), hours % 10);
+  flip(document.querySelector('[data-minute-tens]'), Math.floor(minutes / 10));
+  flip(document.querySelector('[data-minute-ones]'), minutes % 10);
+  flip(document.querySelector('[data-second-tens]'), Math.floor(seconds / 10));
+  flip(document.querySelector('[data-second-ones]'), seconds % 10);
 }
 
 function flip(flipCard, newNumber) {
