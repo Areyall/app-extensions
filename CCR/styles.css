@@ -27,7 +27,7 @@ body {
 
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,25 +35,25 @@ body {
 
 }
 
-.lbl{
+.lbl {
     font-size: 16px;
     color: rgb(55, 55, 55);
     font-weight: 400;
 }
 
-.val{
+.val {
     color: dimgrey;
     font-size: 18px;
     font-weight: 600;
 }
 
-.input-box{
+.input-box {
     background-color: rgb(207, 207, 207);
     color: #6f6df4;
     padding: 5px;
 }
 
-#bill{
+#bill {
     background-color: transparent;
     border: none;
     outline: none;
@@ -63,13 +63,38 @@ body {
 
 }
 
-hr{
+hr {
     border: none;
     border-bottom: 1px solid #cdccfd;
 }
 
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
 
+input[type="range"]:not(:last-child) {
+    margin-bottom: 5px;
+}
 
+section:not(:last-child){
+    margin-bottom: 40px;
+}
+
+section:not(:first-child){
+    margin-top: 40px;
+}
+
+section:last-child{
+    background-color: #cdccfd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+section:last-child .val,
+section:last-child .lbl{
+    color: #4c4af4;
+}
 
 
 
