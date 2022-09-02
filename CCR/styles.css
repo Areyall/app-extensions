@@ -8,8 +8,8 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: .4px;
     --gray-color: #cdccfd;
-    --purple-light: #6f6df4
-    
+    --purple-light: #6f6df4;
+    --purple-dark: #4c4af4;
 }
 
 body {
@@ -55,7 +55,7 @@ body {
 
 .input-box {
     background-color: rgb(207, 207, 207);
-    color: #6f6df4;
+    color: var(--purple-light);
     padding: 5px;
 }
 
@@ -65,7 +65,7 @@ body {
     outline: none;
     width: 100px;
     text-align: right;
-    color: #6f6df4;
+    color: var(--purple-light);
 
 }
 
@@ -99,5 +99,5 @@ section:last-child {
 
 section:last-child .val,
 section:last-child .lbl {
-    color: #5350ff;
+    color: var(--purple-dark);
 }
