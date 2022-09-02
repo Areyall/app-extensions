@@ -1,9 +1,15 @@
 * {
+    box-sizing: border-box;
+}
+
+html {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: .4px;
+    --gray-color: #cdccfd;
+    --purple-light: #6f6df4
+    
 }
 
 body {
@@ -65,7 +71,7 @@ body {
 
 hr {
     border: none;
-    border-bottom: 1px solid #cdccfd;
+    border-bottom: 1px solid var(--gray-color);
 }
 
 input[type="range"] {
@@ -77,27 +83,21 @@ input[type="range"]:not(:last-child) {
     margin-bottom: 5px;
 }
 
-section:not(:last-child){
+section:not(:last-child) {
     margin-bottom: 40px;
 }
 
-section:not(:first-child){
+section:not(:first-child) {
     margin-top: 40px;
 }
 
-section:last-child{
-    background-color: #cdccfd;
+section:last-child {
+    background-color: var(--gray-color);
     padding: 10px;
     border-radius: 5px;
 }
 
 section:last-child .val,
-section:last-child .lbl{
+section:last-child .lbl {
     color: #5350ff;
 }
-
-
-
-
-
-
