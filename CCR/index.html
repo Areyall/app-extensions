@@ -33,12 +33,19 @@
           <label for="tip" class="lbl"> Tip % </label>
           <span id="tip-percent" class="val"> 0</span>
         </div>
-        <input type="range" min="1" id="tip" value="15" />
+        <input type="range" min="1" id="tip" value="15" data-range />
         <div class="wrapper">
           <label for="no-of-people" class="lbl"> No. of people </label>
           <span id="spli-num" class="val">0</span>
         </div>
-        <input type="range" min="1" max="15" id="no-of-people" value="1" />
+        <input
+          type="range"
+          min="1"
+          max="15"
+          id="no-of-people"
+          value="1"
+          data-range
+        />
       </section>
       <section>
         <div class="wrapper">
@@ -47,7 +54,7 @@
         </div>
         <div class="wrapper">
           <span class="lbl"> Total Per Person </span>
-          <span id='total-per-person'>$0</span>
+          <span id="total-per-person">$0</span>
         </div>
       </section>
     </div>
