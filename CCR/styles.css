@@ -79,9 +79,6 @@ input[type="range"] {
     cursor: pointer;
 }
 
-input[type="range"]:not(:last-child) {
-    margin-bottom: 5px;
-}
 
 section:not(:last-child) {
     margin-bottom: 40px;
