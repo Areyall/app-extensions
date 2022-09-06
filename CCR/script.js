@@ -9,7 +9,13 @@ function calculateTip() {
   let bill = parseFloat(billingInput.value);
   let tipPercent = document.getElementById('tip').value;
   let noOfPeople = document.getElementById('no-of-people').value;
-//   console.log(bill, tipPercent, noOfPeople);
+  //   console.log(bill, tipPercent, noOfPeople);
 
-
+  billingInput.value = bill.toFixed(2);
+  let totalTip = parseFloat((bill * (tipPercent / 100)).toFixed(2));
+  let total = parseFloat((bill + totalTip).toFixed(2));
+  
+  let tipPerPerson = (totalTip / noOfPeople).toFixed(2);
+  let totalPerPerson = (total / noOfPeople).toFixed(2);
+  console.log(noOfPeople, totalTip, total, tipPerPerson, totalPerPerson)
 }
