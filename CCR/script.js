@@ -26,4 +26,3 @@ function calculateTip() {
   ).textContent = `\$ ${totalPerPerson}`;
 }
 
-calculateTip();
