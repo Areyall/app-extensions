@@ -48,7 +48,7 @@ body {
 }
 
 .val {
-    color: dimgrey;
+    color: rgb(101, 101, 101);
     font-size: 18px;
     font-weight: 600;
 }
