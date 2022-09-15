@@ -2,12 +2,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html{
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, rgb(129, 0, 175), rgb(90, 0, 169));
+    background: linear-gradient(135deg, rgb(181, 83, 216), rgb(140, 96, 210));
 }
 
 .wrapper {
