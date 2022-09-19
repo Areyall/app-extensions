@@ -22,4 +22,16 @@ const pieColors = [
   '#b163da',
 ];
 
-
+let wheelChart = new Chart(wheel, {
+  plugins: [ChartDataLabels],
+  type: 'pie',
+  data: {
+    labels: [1, 2, 3, 4, 5, 6],
+    datasets: [
+      {
+          data: data,
+          backgroundColor: pieColors,
+      },
+    ],
+  },
+});
