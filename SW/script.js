@@ -50,3 +50,5 @@ let wheelChart = new Chart(wheel, {
     },
   },
 });
+
+
