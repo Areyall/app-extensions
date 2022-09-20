@@ -29,9 +29,24 @@ let wheelChart = new Chart(wheel, {
     labels: [1, 2, 3, 4, 5, 6],
     datasets: [
       {
-          data: data,
-          backgroundColor: pieColors,
+        data: data,
+        backgroundColor: pieColors,
       },
     ],
+  },
+  options: {
+    responsive: true,
+    animation: { duration: 0 },
+    plugins: {
+      tooltip: false,
+      legend: {
+        display: false,
+      },
+      datalabels: {
+        color: '#ffffff',
+        formater: (_, context) => context.chart.data.labels[context.dataIndex],
+        font: {size: 24},
+      },
+    },
   },
 });
