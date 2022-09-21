@@ -61,4 +61,27 @@ const valueGenerator = (angleValue) => {
   }
 };
 
+let count = 0;
+let resultValue = 101;
 
+spinBtn.addEventListener('click', () => {
+  spinBtn.disabled = true;
+  finalValue.innerHTML = `<p>Good Luck!</p>`;
+  let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
+
+  let rotationImterval = window.setInterval(() => {
+    wheelChart.options.rotation = wheelChart.options.rotation + resultValue;
+    wheelChart.update();
+    if (wheelChart.options.rotation >= 360) {
+      count += 1;
+      resultValue -= 5;
+      wheelChart.options.rotation = 0;
+    } else if (count > 15 && wheelChart.options.rotation == randomDegree) {
+      valueGenerator(randomDegree);
+      clearInterval(rotationImterval);
+      count = 0;
+      resultValue = 101;
+    }
+  });
+
+});
