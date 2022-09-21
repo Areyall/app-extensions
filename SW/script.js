@@ -44,11 +44,21 @@ let wheelChart = new Chart(wheel, {
       },
       datalabels: {
         color: '#ffffff',
-        formater: (_, context) => context.chart.data.labels[context.dataIndex],
-        font: {size: 24},
+        formatter: (_, context) => context.chart.data.labels[context.dataIndex],
+        font: { size: 24 },
       },
     },
   },
 });
+
+const valueGenerator = (angleValue) => {
+  for (const i of rotationValues) {
+    if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
+      finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
+      spinBtn.disabled = false;
+      break;
+    }
+  }
+};
 
 
