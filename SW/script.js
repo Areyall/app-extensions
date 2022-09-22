@@ -64,7 +64,7 @@ const valueGenerator = (angleValue) => {
 let count = 0;
 let resultValue = 101;
 
-spinBtn.addEventListener('click', () => {
+function startSpin() {
   spinBtn.disabled = true;
   finalValue.innerHTML = `<p>Good Luck!</p>`;
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
@@ -83,5 +83,6 @@ spinBtn.addEventListener('click', () => {
       resultValue = 101;
     }
   });
+}
 
-});
+spinBtn.addEventListener('click', startSpin);
