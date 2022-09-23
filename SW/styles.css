@@ -8,14 +8,14 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, rgb(181, 83, 216), rgb(140, 96, 210));
+    background-image: linear-gradient(to right top, #00345d, #002958, #001e53, #00124c, #050043);
 }
 
 .wrapper {
     width: 90%;
     max-width: 35em;
     max-height: 90vh;
-    background-color: #fff;
+    background-color: #3A2B72;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
