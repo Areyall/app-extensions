@@ -97,7 +97,7 @@ body {
     font-weight: 500;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 750px) {
     .wrapper {
         font-size: .7em;
     }
