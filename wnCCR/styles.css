@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(9, 0, 27);
+    scroll-behavior: smooth;
+}
+
+.hText {
+    color: bisque;
+}
+
+#windowIco {
+    stroke: #6196BD;
+}
+
+#windowIco:hover {
+    stroke: rgb(255, 191, 0);
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.winType,
+.winCalcs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
+.products {
+    position: relative;
+}
+
+
+
+.winImg {
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+}
+
+.winImg img {
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    inline-size: 85%;
+}
+
+.none {
+    display: none;
+}
+
+.wWidth form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.wHeight form input#wHeight {
+    appearance: slider-vertical;
+    height: 250px;
+}
+
+.wHeight form {
+    align-items: flex-end;
+
+}
+
+.wHeight {
+    width: 80px;
+    height: 80%;
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+}
+
+input[type=number] {
+    width: 60px;
+    height: 20px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    text-align: right;
+    background-color: rgb(200, 200, 200);
+}
+
+input[type=range] {
+    width: 70%;
+}
