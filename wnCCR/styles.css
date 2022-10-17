@@ -34,13 +34,27 @@ html {
     gap: .5em;
 }
 
-.products {
+.mesure{
     position: relative;
+    /* width: 40%; */
+    /* min-width: 250px; */
+    
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 300px;
 }
 
 
 
 .winImg {
+    display: flex;
+    justify-content: center;
     width: 90%;
     height: 100%;
     margin: 15px;
@@ -49,7 +63,7 @@ html {
 .winImg img {
     /* aspect-ratio: 4/3; */
     object-fit: contain;
-    inline-size: 75%;
+    inline-size: 90%;
 }
 
 
@@ -57,7 +71,13 @@ html {
     display: none;
 }
 
+.wWidth{
+    display: flex;
+    width: 80%;
+}
+
 .wWidth form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,22 +85,23 @@ html {
 
 
 
-.wHeight form input#wHeight {
-    appearance: slider-vertical;
-    height: 250px;
-}
-
-.wHeight form {
-    align-items: flex-end;
-
-}
 
 .wHeight {
     width: 80px;
     height: 80%;
-    position: absolute;
     bottom: 20px;
-    right: 0px;
+    top: 0px;
+}
+
+.wHeight form {
+height: 100%;
+    align-items: flex-end;
+
+}
+
+.wHeight form input#wHeight {
+    appearance: slider-vertical;
+    height: 200px;
 }
 
 input[type=number] {
