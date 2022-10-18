@@ -19,8 +19,12 @@
               width="44"
               height="62"
               viewBox="0 0 44 62"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              data-svg="a1"
+              data-svg="a2"
+              uk-tooltip="title: Поворотньо відкидне; pos: right"
+              title=""
+              aria-expanded="false"
             >
               <path
                 d="M43 2V1H42H2H1V2V60V61H2H42H43V60V2Z"
@@ -31,8 +35,11 @@
                 stroke-width="2"
               ></path>
               <path
-                d="M26 27.705L25.295 27L22.5 29.795L19.705 27L19 27.705L21.795 30.5L19 33.295L19.705 34L22.5 31.205L25.295 34L26 33.295L23.205 30.5L26 27.705Z"
-                fill="#6196BD"
+                d="M6 56L38 30.9393L6 6"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               ></path>
             </svg>
           </div>
@@ -42,12 +49,36 @@
               width="86"
               height="62"
               viewBox="0 0 86 62"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              data-svg="b1"
+              data-svg="b6"
             >
               <path
-                d="M44 62H0V0H44V62ZM2 60H42V2H2V60ZM40 58H4V4H40V58ZM6 56H38V6H6V56ZM26 27.7L25.3 27L22.5 29.8L19.7 27L19 27.7L21.8 30.5L19 33.3L19.7 34L22.5 31.2L25.3 34L26 33.3L23.2 30.5L26 27.7ZM26.7 33.3L23.9 30.5L26.7 27.7L25.3 26.3L22.5 29.1L19.7 26.3L18.3 27.7L21.1 30.5L18.3 33.3L19.7 34.7L22.5 31.9L25.3 34.7L26.7 33.3ZM86 62H42V0H86V62ZM44 60H84V2H44V60ZM82 58H46V4H82V58ZM48 56H80V6H48V56ZM68 27.7L67.3 27L64.5 29.8L61.7 27L61 27.7L63.8 30.5L61 33.3L61.7 34L64.5 31.2L67.3 34L68 33.3L65.2 30.5L68 27.7ZM68.7 33.3L65.9 30.5L68.7 27.7L67.3 26.3L64.5 29.1L61.7 26.3L60.3 27.7L63.1 30.5L60.3 33.3L61.7 34.7L64.5 31.9L67.3 34.7L68.7 33.3Z"
-                fill="#6196BD"
+                d="M43 2V1H42H2H1V2V60V61H2H42H43V60V2Z"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M38 5L39 5L39 6L39 56L39 57L38 57L5.99998 57L4.99998 57L4.99998 56L4.99998 6L4.99998 5L5.99998 5L38 5Z"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M6 56L38 30.9393L6 6"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M85 2V1H84H44H43V2V60V61H44H84H85V60V2Z"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M80 5L81 5L81 6L81 56L81 57L80 57L48 57L47 57L47 56L47 6L47 5L48 5L80 5Z"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M68 27.705L67.295 27L64.5 29.795L61.705 27L61 27.705L63.795 30.5L61 33.295L61.705 34L64.5 31.205L67.295 34L68 33.295L65.205 30.5L68 27.705Z"
+                fill="#D26050"
               ></path>
             </svg>
           </div>
@@ -105,62 +136,60 @@
       </section>
       <section>
         <div class="winCalcs">
-          <div class="hText"><h2>Enter window parameters</h2></div>
-          <div class='mesure'>
-          <div class="products">
-              
-            <div class="winImg winOne">
-              <img src="img/w1-min.png" alt="windowOne" />
+          <div class="hText"><h2>Enter window size</h2></div>
+          <div class="mesure">
+            <div class="products">
+              <div class="winImg winOne">
+                <img src="img/w1-min.png" alt="windowOne" />
+              </div>
+              <div class="winImg winTwo none">
+                <img src="img/w2-min.png" alt="windowTwo" />
+              </div>
+              <div class="winImg winThree none">
+                <img src="img/w3-min.png" alt="windowThree" />
+              </div>
+              <div class="wHeight">
+                <div>
+                  <input
+                    type="range"
+                    id="wHeight"
+                    name="wSizeH"
+                    min="800"
+                    max="2000"
+                    orient="vertical"
+                    data-rangeH
+                  />
+                  <input
+                    type="number"
+                    value="1000"
+                    min="1000"
+                    max="2500"
+                    id="wHeightSize"
+                    class="wHeightSize"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="winImg winTwo none">
-              <img src="img/w2-min.png" alt="windowTwo" />
-            </div>
-            <div class="winImg winThree none">
-              <img src="img/w3-min.png" alt="windowThree" />
-            </div>
-            <div class="wHeight">
-              <form>
+            <div class="wWidth">
+              <div>
                 <input
                   type="range"
-                  id="wHeight"
-                  name="wSizeH"
+                  id="wWidth"
+                  name="wSizeW"
                   min="800"
-                  max="2000"
-                  value="1000"
-                  orient="vertical"
-                  data-rangeH
+                  max="3000"
+                  data-rangeW
                 />
                 <input
                   type="number"
-                  value="1000"
-                  id="wHeightSize"
-                  class="wHeightSize"
+                  value="800"
+                  id="wWidthSize"
+                  class="wWidthSize"
                 />
-              </form>
+              </div>
             </div>
           </div>
-          <div class="wWidth">
-            <form>
-              <input
-                type="range"
-                id="wWidth"
-                name="wSizeW"
-                min="800"
-                max="3000"
-                value="1500"
-                data-rangeW
-              />
-              <input
-                type="number"
-                value="800"
-                id="wWidthSize"
-                class="wWidthSize"
-              />
-            </form>
-          </div>
-          
         </div>
-      </div>
       </section>
     </div>
   </body>

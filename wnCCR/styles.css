@@ -26,18 +26,26 @@ html {
 
 }
 
-.winType,
-.winCalcs {
+.winType {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: .5em;
 }
 
+.winCalcs{
+    /* visibility: hidden; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
 .mesure{
     position: relative;
-    /* width: 40%; */
-    /* min-width: 250px; */
+    /* display: flex; */
     
 }
 
@@ -46,7 +54,7 @@ html {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 300px;
 }
 
@@ -69,14 +77,16 @@ html {
 
 .none {
     display: none;
+    transition: 2s ease-in;
 }
 
 .wWidth{
     display: flex;
     width: 80%;
+    margin-top: 1.5em;
 }
 
-.wWidth form {
+.wWidth div {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -93,13 +103,13 @@ html {
     top: 0px;
 }
 
-.wHeight form {
+.wHeight div {
 height: 100%;
     align-items: flex-end;
 
 }
 
-.wHeight form input#wHeight {
+.wHeight div input#wHeight {
     appearance: slider-vertical;
     height: 200px;
 }
@@ -112,6 +122,10 @@ input[type=number] {
     outline: none;
     text-align: right;
     background-color: rgb(200, 200, 200);
+}
+
+input[type=number]:invalid{
+    border: 1 px solid red;
 }
 
 input[type=range] {
