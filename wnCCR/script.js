@@ -1,20 +1,27 @@
 const buttons = document.querySelectorAll('.btnw');
 const windows = document.querySelectorAll('.winImg');
 const calcDiv = document.querySelector('.winCalcs');
-calcDiv.style.display = 'none';
+calcDiv.style.display = 'flex';
+const totCost = document.querySelector('.totNum');
+
+calcDiv.style.opacity = '1';
 
 const ranSliders = document.querySelectorAll('input[type=range]');
+let hightRange = ranSliders[0];
+let widthRange = ranSliders[1];
 const numInput = document.querySelectorAll('input[type=number]');
-// console.log(ranSliders[0].value);
+let hightInput = numInput[0];
+let widthInput = numInput[1];
 
 buttons.forEach((e) => e.addEventListener('click', choseWindowBtn));
-ranSliders.forEach((e) => e.addEventListener('input', calculatePrice));
-numInput.forEach((e) =>
-  e.addEventListener('change', (e) => {
-    e.preventDefault();
-    ranSliders[0].value = numInput[0].value;
-  })
-);
+ranSliders.forEach((e) => e.addEventListener('input', calculateSize));
+numInput.forEach((e) => e.addEventListener('change', winSizeNum));
+
+function winSizeNum(e) {
+  e.preventDefault();
+  hightRange.value = hightInput.value;
+  widthRange.value = widthInput.value;
+}
 
 function choseWindowBtn() {
   if (calcDiv.style.display == 'none') {
@@ -38,10 +45,13 @@ function choseWindowBtn() {
   });
 }
 
-function calculatePrice() {
-  if (numInput[0].value) {
-    numInput[0].value = ranSliders[0].value;
-  }
-}
+function calculateSize(e) {
+  hightInput.value = hightRange.value;
+  widthInput.value = widthRange.value;
 
-calculatePrice();
+  let totalParams = (.06 * (+hightRange.value + +widthRange.value)).toFixed(2);
+  totCost.textContent = totalParams;
+}
+// function calculatePrice(e) {}
+
+calculateSize();

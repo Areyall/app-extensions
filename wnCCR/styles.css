@@ -33,7 +33,7 @@ html {
     gap: .5em;
 }
 
-.winCalcs{
+.winCalcs {
     /* visibility: hidden; */
     display: flex;
     flex-direction: column;
@@ -43,10 +43,10 @@ html {
     transition: opacity .5s ease-in;
 }
 
-.mesure{
+.mesure {
     position: relative;
     /* display: flex; */
-    
+
 }
 
 .products {
@@ -55,7 +55,7 @@ html {
     align-items: center;
     position: relative;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
 }
 
 
@@ -80,13 +80,13 @@ html {
     transition: 2s ease-in;
 }
 
-.wWidth{
+.wWidth {
     display: flex;
     width: 80%;
     margin-top: 1.5em;
 }
 
-.wWidth div {
+.wWidth .inpFieldW {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -104,7 +104,7 @@ html {
 }
 
 .wHeight div {
-height: 100%;
+    height: 100%;
     align-items: flex-end;
 
 }
@@ -124,10 +124,107 @@ input[type=number] {
     background-color: rgb(200, 200, 200);
 }
 
-input[type=number]:invalid{
+input[type=number]:invalid {
     border: 1 px solid red;
+}
+
+.inpLabelH {
+    color: rgb(209, 209, 209);
+    margin-left: 15px;
+}
+
+.inpLabelW {
+    color: rgb(209, 209, 209);
+    margin-left: .2em;
+}
+
+.inInp {
+    display: flex;
 }
 
 input[type=range] {
     width: 70%;
+}
+
+.moreOptions {
+    display: flex;
+    justify-content: center;
+}
+
+.optionCont {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.calcButton {
+
+    min-width: 200px;
+    width: 20%;
+    margin: 0px 15px 0px 15px;
+    height: 2em;
+    background-color: #1a213f;
+    color: #e7e7e7;
+    font-size: 1.5em;
+
+}
+
+.calcButton:hover {
+    border: 3px solid #6693c5;
+    transition: 1s;
+}
+
+.calcButton:active {
+    background-color: #233a9f;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+input.me-2 {
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.btn.btn-primary {
+    color: #d1d1d1;
+}
+
+.totalCost {
+    display: flex;
+    margin: 15px 0px 15px 0px;
+
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.totText,
+.totNum {
+    color: #e7e7e7;
+    font-size: 1.5em;
+}
+
+.totNum::after{
+content: ' $';
+}
+
+@media screen and (max-width: 425px) {
+
+    .optionCont {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calcButton {
+        font-size: 1em;
+        margin: 10px 0 20px 0;
+    }
 }
