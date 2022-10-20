@@ -1,10 +1,10 @@
 const buttons = document.querySelectorAll('.btnw');
 const windows = document.querySelectorAll('.winImg');
 const calcDiv = document.querySelector('.winCalcs');
-calcDiv.style.display = 'flex';
+calcDiv.style.display = 'block';
 const totCost = document.querySelector('.totNum');
 
-calcDiv.style.opacity = '1';
+// calcDiv.style.opacity = '1';
 
 const ranSliders = document.querySelectorAll('input[type=range]');
 let hightRange = ranSliders[0];
