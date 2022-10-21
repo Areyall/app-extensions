@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll('.btnw');
 const windows = document.querySelectorAll('.winImg');
 const calcDiv = document.querySelector('.winCalcs');
-calcDiv.style.display = 'block';
+calcDiv.style.display = 'none';
 const totCost = document.querySelector('.totNum');
 
 // calcDiv.style.opacity = '1';
