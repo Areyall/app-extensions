@@ -4,7 +4,7 @@ const calcDiv = document.querySelector('.winCalcs');
 calcDiv.style.display = 'none';
 const totCost = document.querySelector('.totNum');
 
-calcDiv.style.opacity = '1';
+// calcDiv.style.opacity = '1';
 
 const ranSliders = document.querySelectorAll('input[type=range]');
 let hightRange = ranSliders[0];
