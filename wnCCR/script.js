@@ -55,3 +55,6 @@ function calculateSize(e) {
 // function calculatePrice(e) {}
 
 calculateSize();
+
+
+
